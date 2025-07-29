@@ -7,7 +7,7 @@ interface ParentProps {
 }
 
 
-const InputField = ({addTask }: ParentProps) => {
+const InputField = ({ addTask }: ParentProps) => {
 
 
     let [value, setValue] = useState('')
@@ -16,34 +16,38 @@ const InputField = ({addTask }: ParentProps) => {
     return (
         <>
 
-            <form action=""
-                className="text-center flex gap-[20px] justify-center"
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    addTask(value);
-                    setValue('');
-                }}>
+            <div className="max-[500px]:w-[350px]">
 
-                <input
-                    className="input-box w-[500px] h-[50px] rounded-[5px] px-[5px] text-[black]"
-                    type="text"
-                    placeholder="Enter a task"
-                    value={value}
-                    onChange={
-                        (e) => {
-                            setValue(e.target.value)
-                            // console.log(todo);
+                <form action=""
+                    className="text-center flex gap-[20px] justify-center"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        addTask(value);
+                        setValue('');
+                    }}>
 
-                        }
-                    } />
+                    <input
+                        className="input-box w-[500px] h-[50px] rounded-[5px] px-[5px] text-[black]"
+                        type="text"
+                        placeholder="Enter a task"
+                        value={value}
+                        onChange={
+                            (e) => {
+                                setValue(e.target.value)
+                                // console.log(todo);
 
-                <button
-                    type="submit"
-                    className="input-submit w-[100px] h-[50px] bg-[white] text-[black]">
-                    Enter
-                </button>
+                            }
+                        } />
 
-            </form>
+                    <button
+                        type="submit"
+                        className="input-submit w-[100px] h-[50px] bg-[white] text-[black]">
+                        Enter
+                    </button>
+
+                </form>
+
+            </div>
 
         </>
     )

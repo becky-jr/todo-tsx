@@ -92,7 +92,7 @@ const App = () => {
 
 	return (
 
-		<div className="container mx-auto">
+		<div className="container mx-auto max-[500px]:px-[20px]">
 
 			<div className="App">
 

@@ -70,7 +70,7 @@ const TaskField = ({ task, deleteTask, updateTask }: TaskFieldProps) => {
 	};
 
 	return (
-		<div className="Task-conten w-[620px] mx-auto my-[20px]">
+		<div className="Task-conten w-[620px] mx-auto my-[20px] max-[500px]:w-[350px] max-[500px]:max-h-[50px]">
 			<div className="Task flex justify-between items-center mb-[10px]">
 				{isEditing ? (
 					<input
@@ -82,7 +82,7 @@ const TaskField = ({ task, deleteTask, updateTask }: TaskFieldProps) => {
 						autoFocus
 					/>
 				) : (
-					<div className="task-text w-full" onDoubleClick={handleDoubleClick}>
+					<div className="task-text w-full max-[500px]:w-[350px]" onDoubleClick={handleDoubleClick}>
 						{task.taskName}
 					</div>
 				)}
