@@ -97,7 +97,7 @@ const App = () => {
 			<div className="App">
 
 				<div className="text-center text-[50px]">
-					Taskify
+					MyTodo
 				</div>
 
 				<InputField addTask={addTask} />
